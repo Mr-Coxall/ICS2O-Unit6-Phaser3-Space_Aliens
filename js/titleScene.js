@@ -13,9 +13,9 @@ class TitleScene extends Phaser.Scene {
   }
 
   create (data) {
-    if (this.sound.context.state === 'suspended') {
-      this.sound.context.resume()
-    }
+    //if (this.sound.context.state === 'suspended') {
+    //  this.sound.context.resume()
+    //}
     const backgroundImage = this.add.image(this.cameras.main.centerX, this.cameras.main.centerY, 'background')
     backgroundImage.depth = 0
   }
