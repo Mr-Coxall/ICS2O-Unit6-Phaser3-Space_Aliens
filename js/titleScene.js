@@ -29,7 +29,7 @@ class TitleScene extends Phaser.Scene {
 
   clickButton() {
     console.log("Clicked")
-    this.scene.switch('gameScene')
+    this.scene.switch('menuScene')
   }
 
 }
