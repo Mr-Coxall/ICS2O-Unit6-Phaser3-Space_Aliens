@@ -6,7 +6,7 @@ class TitleScene extends Phaser.Scene {
   }
 
   init (data) {
-    console.log("Starting title scene")
+    console.log('Starting title scene')
   }
 
   preload () {
@@ -23,7 +23,7 @@ class TitleScene extends Phaser.Scene {
 
   update (time, delta) {
     if (time > 4000) {
-      console.log("Moving to menu scene")
+      console.log('Moving to menu scene')
       this.scene.switch('menuScene')
     }
   }

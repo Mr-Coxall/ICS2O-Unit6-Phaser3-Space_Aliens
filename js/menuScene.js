@@ -6,7 +6,7 @@ class MenuScene extends Phaser.Scene {
   }
 
   init () {
-    console.log("Starting menu scene")
+    console.log('Starting menu scene')
   }
 
   preload () {
@@ -27,7 +27,7 @@ class MenuScene extends Phaser.Scene {
   }
 
   clickButton () {
-    console.log("Moving to game scene")
+    console.log('Moving to game scene')
     this.scene.switch('gameScene')
   }
 }
