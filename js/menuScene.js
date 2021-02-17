@@ -1,3 +1,5 @@
+/* global Phaser */
+
 class MenuScene extends Phaser.Scene {
 
 	constructor() {

@@ -1,3 +1,5 @@
+/* global Phaser */
+
 class TitleScene extends Phaser.Scene {
 
 	constructor() {

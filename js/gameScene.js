@@ -1,3 +1,5 @@
+/* global Phaser */
+
 class GameScene extends Phaser.Scene {
 
 	constructor() {

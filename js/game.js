@@ -1,4 +1,5 @@
 /* global Phaser */
+
 import TitleScene from './titleScene.js'
 import MenuScene from './menuScene.js'
 import GameScene from './gameScene.js'
