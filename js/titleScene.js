@@ -6,6 +6,7 @@ class TitleScene extends Phaser.Scene {
   }
 
   init (data) {
+    console.log("Starting title scene")
   }
 
   preload () {
@@ -13,15 +14,16 @@ class TitleScene extends Phaser.Scene {
   }
 
   create (data) {
-    //if (this.sound.context.state === 'suspended') {
-    //  this.sound.context.resume()
-    //}
+    // if (this.sound.context.state === 'suspended') {
+    //   this.sound.context.resume()
+    // }
     const backgroundImage = this.add.image(this.cameras.main.centerX, this.cameras.main.centerY, 'background')
     backgroundImage.depth = 0
   }
 
   update (time, delta) {
     if (time > 4000) {
+      console.log("Moving to menu scene")
       this.scene.switch('menuScene')
     }
   }

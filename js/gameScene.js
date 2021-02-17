@@ -6,6 +6,7 @@ class GameScene extends Phaser.Scene {
   }
 
   init () {
+    console.log("Starting game scene")
   }
 
   preload () {
