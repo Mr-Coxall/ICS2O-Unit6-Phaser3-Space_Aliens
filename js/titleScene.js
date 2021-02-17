@@ -19,8 +19,10 @@ class TitleScene extends Phaser.Scene {
       this.sound.context.resume()
     }
     const backgroundImage = this.add.image(this.cameras.main.centerX, this.cameras.main.centerY, 'background')
+    backgroundImage.depth = 0
     const startButton = this.add.image(this.cameras.main.centerX, this.cameras.main.centerY, 'start').setInteractive()
     startButton.on('pointerdown', () => this.clickButton())
+    startButton.depth = 1
   }
 
   update (time, delta) {
