@@ -3,6 +3,8 @@
 class TitleScene extends Phaser.Scene {
   constructor () {
     super({ key: 'titleScene' })
+
+    //this.startTime = new Date()
   }
 
   init (data) {
@@ -26,7 +28,9 @@ class TitleScene extends Phaser.Scene {
   }
 
   update (time, delta) {
-
+    if (time > 3000) {
+      this.clickButton()
+    }
   }
 
   clickButton () {

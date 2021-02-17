@@ -12,10 +12,11 @@ class GameScene extends Phaser.Scene {
   }
 
   create () {
+    console.log('Game scene started')
   }
 
   update () {
-    console.log('Game scene')
+    //console.log('Game scene')
   }
 
   end () {
