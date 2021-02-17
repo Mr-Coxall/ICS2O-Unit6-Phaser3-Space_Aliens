@@ -1,27 +1,29 @@
 /* global Phaser */
 
 class MenuScene extends Phaser.Scene {
-	constructor() {
-		super({key : 'menuScene'})
-	}
+  constructor () {
+    super({ key:'menuScene' })
+  }
+  
+  init () {
 
-	init() {
-	};
+  }
+  
+  preload () {
 
-	preload() {
-	}
-
-	create() {
+  }
+  
+  create () {
     this.scene.remove('titleScene')
-	}
-
-	update() {
+  }
+  
+  update () {
     this.scene.switch('gameScene')
-    //this.scene.remove('menuScene')
-	}
-
-	end() {
-	}
+  }
+  
+  end () {
+    
+  }
 }
 
 export default MenuScene
