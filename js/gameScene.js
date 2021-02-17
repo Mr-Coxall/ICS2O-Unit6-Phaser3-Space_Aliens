@@ -1,33 +1,25 @@
 /* global Phaser */
 
 class GameScene extends Phaser.Scene {
-
-	constructor() {
-		super({key : 'gameScene'});
+  constructor() {
+		super({key : 'gameScene'})
 	}
 
 	init() {
-		
-	};
+	}
 
 	preload() {
-		
 	}
 
 	create() {
-	   
-
 	}
 
 	update() {
     console.log("Game scene")
 	}
 
-
-	end() {
-		
+	end() {	
 	}
-
 }
 
-export default GameScene;
+export default GameScene

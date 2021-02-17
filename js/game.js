@@ -5,9 +5,9 @@ import MenuScene from './menuScene.js'
 import GameScene from './gameScene.js'
 
 // Our scenes
-var titleScene = new TitleScene();
-var menuScene = new MenuScene();
-var gameScene = new GameScene();
+const titleScene = new TitleScene()
+const menuScene = new MenuScene()
+const gameScene = new GameScene()
 
 const config = {
   type: Phaser.AUTO,
@@ -23,8 +23,8 @@ const game = new Phaser.Game(config)
 
 // load scenes
 game.scene.add('titleScene', titleScene)
-game.scene.add("menuScene", menuScene)
-game.scene.add("gameScene", gameScene)
+game.scene.add('menuScene', menuScene)
+game.scene.add('gameScene', gameScene)
 
 // start title
 game.scene.start('titleScene')

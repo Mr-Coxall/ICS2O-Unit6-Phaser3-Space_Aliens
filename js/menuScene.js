@@ -1,22 +1,18 @@
 /* global Phaser */
 
 class MenuScene extends Phaser.Scene {
-
 	constructor() {
-		super({key : 'menuScene'});
+		super({key : 'menuScene'})
 	}
 
 	init() {
-		
 	};
 
 	preload() {
-		
 	}
 
 	create() {
     this.scene.remove('titleScene')
-
 	}
 
 	update() {
@@ -24,11 +20,8 @@ class MenuScene extends Phaser.Scene {
     //this.scene.remove('menuScene')
 	}
 
-
 	end() {
-		
 	}
-
 }
 
-export default MenuScene;
+export default MenuScene
