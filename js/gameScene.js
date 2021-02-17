@@ -16,7 +16,6 @@ class GameScene extends Phaser.Scene {
   }
 
   update () {
-    //console.log('Game scene')
   }
 
   end () {
