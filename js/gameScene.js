@@ -77,7 +77,7 @@ class GameScene extends Phaser.Scene {
   createAnAlien () {
     //  This creates a new Alien instance within the group
     // random integer: Math.floor(Math.random() * (max - min) ) + min
-    const xPosition = Math.floor(Math.random() * ( (1920 - 100) - 100) ) + 100
+    const xPosition = Math.floor(Math.random() * ((1920 - 100) - 100)) + 100
     const yPosition = Math.floor(500)
 
     this.aliens.create(xPosition, yPosition, 'alien')
