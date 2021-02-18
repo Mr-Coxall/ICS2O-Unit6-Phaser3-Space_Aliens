@@ -5,9 +5,9 @@ class GameScene extends Phaser.Scene {
     super({ key: 'gameScene' })
 
     this.spaceShip = null
-    this.leftButton
-    this.rightButton
-    this.fireButton
+    this.leftButton = null
+    this.rightButton = null
+    this.fireButton = null
   }
 
   init () {
@@ -45,8 +45,7 @@ class GameScene extends Phaser.Scene {
 
     if (cursorKeys.left.isDown === true) {
       this.spaceShip.x = this.spaceShip.x - 10
-    }
-    else if (cursorKeys.right.isDown === true) {
+    } else if (cursorKeys.right.isDown === true) {
       this.spaceShip.x = this.spaceShip.x + 10
     }
   }
