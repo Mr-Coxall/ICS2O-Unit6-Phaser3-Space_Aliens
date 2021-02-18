@@ -32,9 +32,11 @@ class GameScene extends Phaser.Scene {
 
     this.leftButton = this.add.sprite(100, 1000, 'leftButton')
     this.leftButton.alpha = 0.5
+    this.leftButton.on('pointerdown', () => this.moveShipLeft())
 
     this.rightButton = this.add.sprite(300, 1000, 'rightButton')
     this.rightButton.alpha = 0.5
+    this.rightButton.on('pointerdown', () => this.moveShipRight())
 
     this.fireButton = this.add.sprite(1920 - 100, 1000, 'fireButton')
     this.fireButton.alpha = 0.5
@@ -44,14 +46,22 @@ class GameScene extends Phaser.Scene {
     const cursorKeys = this.input.keyboard.createCursorKeys()
 
     if (cursorKeys.left.isDown === true) {
-      this.spaceShip.x = this.spaceShip.x - 10
+      this.moveShipLeft()
     } else if (cursorKeys.right.isDown === true) {
-      this.spaceShip.x = this.spaceShip.x + 10
+      this.moveShipRight()
     }
   }
 
   end () {
   }
+
+  moveShipLeft () {
+    this.spaceShip.x = this.spaceShip.x - 10
+  }
+
+  moveShipRight () {
+    this.spaceShip.x = this.spaceShip.x + 10
+  }  
 }
 
 export default GameScene
