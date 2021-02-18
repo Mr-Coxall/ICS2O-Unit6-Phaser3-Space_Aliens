@@ -8,6 +8,8 @@ class GameScene extends Phaser.Scene {
     this.leftButton = null
     this.rightButton = null
     this.fireButton = null
+    this.aliens = null
+    this.lasers = null
   }
 
   init () {
@@ -20,6 +22,8 @@ class GameScene extends Phaser.Scene {
     this.load.image('leftButton', 'assets/leftButton.png')
     this.load.image('rightButton', 'assets/rightButton.png')
     this.load.image('fireButton', 'assets/redButton.png')
+    this.load.image('alien', 'assets/alien.png')
+    this.load.image('laser', 'assets/missile.png')
   }
 
   create () {
@@ -30,16 +34,23 @@ class GameScene extends Phaser.Scene {
 
     this.spaceShip = this.add.sprite(this.cameras.main.centerX, 1000, 'ship')
 
-    this.leftButton = this.add.sprite(100, 1000, 'leftButton')
+    this.leftButton = this.add.sprite(100, 1000, 'leftButton').setInteractive()
     this.leftButton.alpha = 0.5
-    this.leftButton.on('pointerdown', () => this.moveShipLeft())
+    this.leftButton.on('isDown', () => this.moveShipLeft())
 
-    this.rightButton = this.add.sprite(300, 1000, 'rightButton')
+    this.rightButton = this.add.sprite(300, 1000, 'rightButton').setInteractive()
     this.rightButton.alpha = 0.5
     this.rightButton.on('pointerdown', () => this.moveShipRight())
 
-    this.fireButton = this.add.sprite(1920 - 100, 1000, 'fireButton')
+    this.fireButton = this.add.sprite(1920 - 100, 1000, 'fireButton').setInteractive()
     this.fireButton.alpha = 0.5
+
+    //  Here we create 2 new groups
+    this.aliens = this.add.group();
+    this.lasers = this.add.group();
+
+    // start with 1 alien coming down
+    this.createAnAlien()
   }
 
   update () {
@@ -61,6 +72,15 @@ class GameScene extends Phaser.Scene {
 
   moveShipRight () {
     this.spaceShip.x = this.spaceShip.x + 10
+  }
+
+  createAnAlien () {
+    //  This creates a new Alien instance within the group
+    // random integer: Math.floor(Math.random() * (max - min) ) + min
+    const xPosition = Math.floor(Math.random() * ((1920 - 100) - 100) ) + 100
+    const yPosition = Math.floor(500)
+
+    this.aliens.create(xPosition, yPosition, 'alien');
   }
 }
 
