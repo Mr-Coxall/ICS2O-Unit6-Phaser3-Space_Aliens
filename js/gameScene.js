@@ -61,7 +61,7 @@ class GameScene extends Phaser.Scene {
 
   moveShipRight () {
     this.spaceShip.x = this.spaceShip.x + 10
-  }  
+  }
 }
 
 export default GameScene
