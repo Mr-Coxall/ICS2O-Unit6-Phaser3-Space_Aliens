@@ -46,8 +46,8 @@ class GameScene extends Phaser.Scene {
     this.fireButton.alpha = 0.5
 
     //  Here we create 2 new groups
-    this.aliens = this.add.group();
-    this.lasers = this.add.group();
+    this.aliens = this.add.group()
+    this.lasers = this.add.group()
 
     // start with 1 alien coming down
     this.createAnAlien()
@@ -77,10 +77,10 @@ class GameScene extends Phaser.Scene {
   createAnAlien () {
     //  This creates a new Alien instance within the group
     // random integer: Math.floor(Math.random() * (max - min) ) + min
-    const xPosition = Math.floor(Math.random() * ((1920 - 100) - 100) ) + 100
+    const xPosition = Math.floor(Math.random() * ( (1920 - 100) - 100) ) + 100
     const yPosition = Math.floor(500)
 
-    this.aliens.create(xPosition, yPosition, 'alien');
+    this.aliens.create(xPosition, yPosition, 'alien')
   }
 }
 
