@@ -4,7 +4,7 @@ class GameScene extends Phaser.Scene {
   constructor () {
     super({ key: 'gameScene' })
 
-    this.spaceShip
+    this.spaceShip = null
     this.leftButton
     this.rightButton
     this.fireButton
@@ -36,20 +36,18 @@ class GameScene extends Phaser.Scene {
     this.rightButton = this.add.sprite(300, 1000, 'rightButton')
     this.rightButton.alpha = 0.5
 
-    this.fireButton = this.add.sprite(1920-100, 1000, 'fireButton')
+    this.fireButton = this.add.sprite(1920 - 100, 1000, 'fireButton')
     this.fireButton.alpha = 0.5
   }
 
   update () {
-    let cursorKeys = this.input.keyboard.createCursorKeys()
+    const cursorKeys = this.input.keyboard.createCursorKeys()
 
-    if (cursorKeys.left.isDown == true)
-    {
-        this.spaceShip.x = this.spaceShip.x - 10
+    if (cursorKeys.left.isDown === true) {
+      this.spaceShip.x = this.spaceShip.x - 10
     }
-    else if (cursorKeys.right.isDown ==true)
-    {
-        this.spaceShip.x = this.spaceShip.x + 10
+    else if (cursorKeys.right.isDown === true) {
+      this.spaceShip.x = this.spaceShip.x + 10
     }
   }
 
